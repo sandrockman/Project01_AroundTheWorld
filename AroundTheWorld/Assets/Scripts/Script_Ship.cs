@@ -14,7 +14,7 @@ public class Script_Ship : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -25,9 +25,7 @@ public class Script_Ship : MonoBehaviour {
 		transform.Rotate (Vector3.up * newRotate);
 
 		//Get the movement of the player.
-		transform.localPosition += transform.right * moveSpeed * Time.deltaTime;
-		//use the next line if the above one doesn't work when the real ship object is added.
-		//transform.localPosition += transform.forward * moveSpeed * Time.deltaTime;
+		transform.localPosition += transform.forward * moveSpeed * Time.deltaTime;
 		Runaway ();
 	}
 
@@ -36,4 +34,6 @@ public class Script_Ship : MonoBehaviour {
 		moveSpeed += speedIncreaseAmount;
 		points += pointIncreaseAmount;
 	}
+
+
 }
